@@ -42,7 +42,7 @@ function LoginForm() {
         Welcome back! Please enter your details
       </Text>
 
-      <Box pt={10}>
+      <Box pt={10} marginLeft={"50px"}>
         <Text mb="8px" fontSize={"16px"} fontWeight={400}>Email</Text>
         <Input value={email} onChange={(e) => setEmail(e.target.value)} size="md" marginBottom={7} />
 

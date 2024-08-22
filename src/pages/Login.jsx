@@ -5,7 +5,7 @@ import img from '../assets/Rec.png'
 
 function Login() {
   return (
-    <Flex justifyContent={'space-between'} p={'20px 0 20px 80px'} alignItems={'center'} h={'100vh'}>
+    <Flex justifyContent={'space-between'} p={'20px 0 20px 80px'} alignItems={'center'} h={'100vh'} gap={'2rem'} >
         <LoginForm />
 
         <Box w={'710px'} h={'976px'} borderRadius={'10px'} opacity={'85%'}>

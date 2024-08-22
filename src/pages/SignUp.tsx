@@ -5,7 +5,7 @@ import SignForm from '../components/SignForm'
 
 function SignUp() {
   return (
-    <Flex justifyContent={'space-between'} p={'20px 0 20px 80px'} alignItems={'center'} h={'100vh'}>
+    <Flex justifyContent={'space-between'} p={'20px 0 20px 80px'} alignItems={'center'} h={'100vh'} gap={'2rem'}>
         <SignForm />
 
         <Box  h={'976px'}  borderRadius={'10px'} opacity={'85%'}>
