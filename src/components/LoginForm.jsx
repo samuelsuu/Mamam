@@ -35,22 +35,22 @@ function LoginForm() {
 
   return (
     <Box>
-      <Text fontSize={"48px"} fontWeight={600} mb={3}>
+      <Text fontSize={{ base: "36px", md: "48px" }} fontWeight={600} mb={3}>
         Welcome back
       </Text>
-      <Text fontSize={"16px"} fontWeight={400} mb={2}>
+      <Text fontSize={{ base: "14px", md: "16px" }} fontWeight={400} mb={2}>
         Welcome back! Please enter your details
       </Text>
 
-      <Box pt={10} marginLeft={"50px"}>
-        <Text mb="8px" fontSize={"16px"} fontWeight={400}>Email</Text>
+      <Box pt={10} ml={{ base: "0", md: "50px" }}>
+        <Text mb="8px" fontSize={{ base: "14px", md: "16px" }} fontWeight={400}>Email</Text>
         <Input value={email} onChange={(e) => setEmail(e.target.value)} size="md" marginBottom={7} />
 
-        <Text mb="8px" fontSize={"16px"} fontWeight={400}>Password</Text>
+        <Text mb="8px" fontSize={{ base: "14px", md: "16px" }} fontWeight={400}>Password</Text>
         <Input value={password} onChange={(e) => setPassword(e.target.value)} size="md" type="password" />
       </Box>
 
-      <Flex justifyContent={'space-between'} my={'10px'} fontSize={"16px"} fontWeight={400}>
+      <Flex justifyContent={'space-between'} my={'10px'} fontSize={{ base: "14px", md: "16px" }} fontWeight={400}>
         <Checkbox size="lg" isInvalid>
           Remember me
         </Checkbox>
@@ -58,13 +58,21 @@ function LoginForm() {
         <Link to='/'>Forget Password?</Link>
       </Flex>
 
-      <Box my={'50px'} fontSize={"16px"} fontWeight={400}>
-        <Button onClick={handleLogin} style={{background: '#D43710', width: '60vh', padding: '4px', borderRadius: '10%', color: '#ffffff'}}>
+      <Box my={'50px'}>
+        <Button
+          onClick={handleLogin}
+          bg='#D43710'
+          color='#ffffff'
+          w={{ base: '100%', md: '60vh' }} // Full width on mobile, 60vh on larger screens
+          p={{ base: '1rem', md: '4px' }} // Larger padding on mobile
+          borderRadius='10%'
+          fontSize={{ base: 'sm', md: 'md' }} // Smaller font size on mobile
+        >
           Sign in
         </Button>
       </Box>
 
-      <Text fontSize={"16px"} fontWeight={400}>
+      <Text fontSize={{ base: "14px", md: "16px" }} fontWeight={400}>
         Don’t have an account? 
         <Link to='/SignUp' style={{color: '#D43710'}}>Sign up for free</Link>
       </Text>

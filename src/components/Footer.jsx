@@ -4,45 +4,73 @@ import React from "react";
 function Footer() {
   return (
     <Flex
+      direction={{ base: "column", md: "row" }} // Stacks vertically on small screens, horizontally on larger screens
       bg={"#FF4213"}
-      h={"307px"}
       color={"#ffffff"}
-      justifyContent={"space-between"}
-      p={"30px 40px 10px 80px"}
+      p={{ base: "20px", md: "30px 40px 10px 80px" }} // Adjust padding for mobile
       alignItems={"center"}
-      
+      justifyContent={"center"}
+      gap={6}
     >
-      <Box>
+      <Box textAlign={{ base: "center", md: "left" }} mb={{ base: 6, md: 0 }}>
         <Text
           color={"#000000"}
           fontWeight={400}
           fontSize={"16px"}
           bg={"#FCFCFC"}
-          p={"7px, 29px, 7px, 29px"}
+          p={"7px 29px"}
           w={"182px"}
           textAlign={"center"}
           borderRadius={"14px"}
-          my={10}
+          mb={4}
         >
           Lot of Discounts
         </Text>
-        <Text fontSize={39} fontWeight={600}>Get lots of discounts and <br />free shipping here</Text>
+        <Text fontSize={{ base: "24px", md: "39px" }} fontWeight={600}>
+          Get lots of discounts and <br />free shipping here
+        </Text>
       </Box>
 
-      <Box bg={"#000000"} h={"210px"} w={"475px"} p={10}>
-        <Flex justifyContent={"space-between"} alignItems={"center"}>
-          <Box>
-            <Text fontSize={'25px'} fontWeight={600}>Get Discount 44%</Text>
-            <Text fontSize={'20px'} fontWeight={400}>Just for new user</Text>
+      <Box
+        bg={"#000000"}
+        h={{ base: "auto", md: "210px" }} // Adjust height for mobile
+        w={{ base: "100%", md: "475px" }} // Adjust width for mobile
+        p={4}
+        borderRadius={"10px"}
+      >
+        <Flex direction={{ base: "column", md: "row" }} alignItems={"center"} gap={4}>
+          <Box textAlign={{ base: "center", md: "left" }} flex="1">
+            <Text fontSize={{ base: "20px", md: "25px" }} fontWeight={600}>
+              Get Discount 44%
+            </Text>
+            <Text fontSize={{ base: "14px", md: "20px" }} fontWeight={400}>
+              Just for new users
+            </Text>
           </Box>
-          <Box fontSize={'20px'} fontWeight={400} color={'#000000'} bg={'#ffffff'} p={1} borderRadius={'26px'}>
-            <button>Get it now</button>
+          <Box
+            fontSize={{ base: "14px", md: "20px" }}
+            fontWeight={400}
+            color={"#000000"}
+            bg={"#ffffff"}
+            p={2}
+            borderRadius={"26px"}
+            textAlign={"center"}
+            flex="1"
+          >
+            <button style={{ background: 'none', border: 'none', color: '#000', cursor: 'pointer' }}>Get it now</button>
           </Box>
         </Flex>
 
-        <Flex justifyContent={"space-between"} alignItems={"center"} my={10}>
-          <Text fontSize={'16px'} fontWeight={400}>Until 27 Apr 2022</Text>
-          <Text fontSize={'16px'} fontWeight={400}>Terms n condition</Text>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          fontSize={{ base: "14px", md: "16px" }}
+          fontWeight={400}
+          mt={4}
+        >
+          <Text>Until 27 Apr 2022</Text>
+          <Text>Terms & conditions</Text>
         </Flex>
       </Box>
     </Flex>

@@ -32,16 +32,26 @@ function Hero() {
             Taste the best food <br /> it's on-time delivery <br /> with us
           </Text>
           <Text fontSize={["16px", "20px"]} fontWeight={400} mb={10}>
-            Best cooks and best delivery guys are all at<br /> your service. Call us,
-            we’ll be there.
+            Best cooks and best delivery guys are all at
+            <br /> your service. Call us, we’ll be there.
           </Text>
           <Flex
+            direction={{ base: "column", md: "row" }} // Stack vertically on small screens, horizontally on larger screens
             gap={[4, 10]}
             justifyContent={["center", "flex-start"]}
+            alignItems={"center"} // Align items center to handle vertical alignment in row
             my={10}
           >
-            <img src={img2} alt="Feature 1" />
-            <img src={img3} alt="Feature 2" />
+            <img
+              src={img2}
+              alt="Feature 1"
+              style={{ width: "100%", maxWidth: "300px", objectFit: "cover" }}
+            />
+            <img
+              src={img3}
+              alt="Feature 2"
+              style={{ width: "100%", maxWidth: "300px", objectFit: "cover" }}
+            />
           </Flex>
         </Box>
         <Box h={["auto", "452px"]} w={["100%", "auto"]} textAlign={"center"}>
