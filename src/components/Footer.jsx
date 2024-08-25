@@ -23,6 +23,9 @@ function Footer() {
           textAlign={"center"}
           borderRadius={"14px"}
           mb={4}
+          display={"flex"}
+          justifyContent={"center"}
+          ml={"40px"}
         >
           Lot of Discounts
         </Text>
@@ -56,6 +59,7 @@ function Footer() {
             borderRadius={"26px"}
             textAlign={"center"}
             flex="1"
+            justifyContent={"center"}
           >
             <button style={{ background: 'none', border: 'none', color: '#000', cursor: 'pointer' }}>Get it now</button>
           </Box>

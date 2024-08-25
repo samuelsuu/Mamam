@@ -45,12 +45,12 @@ function Hero() {
             <img
               src={img2}
               alt="Feature 1"
-              style={{ width: "100%", maxWidth: "300px", objectFit: "cover" }}
+              style={{ width: "100%", maxWidth: "200px", objectFit: "cover" }}
             />
             <img
               src={img3}
               alt="Feature 2"
-              style={{ width: "100%", maxWidth: "300px", objectFit: "cover" }}
+              style={{ width: "100%", maxWidth: "200px", objectFit: "cover" }}
             />
           </Flex>
         </Box>

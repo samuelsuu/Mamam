@@ -28,8 +28,8 @@ function Navbar() {
         {/* Desktop Menu */}
         <Flex display={{ base: 'none', md: 'flex' }} gap="2rem" alignItems="center">
           <RouterLink to='/'>Home</RouterLink>
-          <RouterLink to='/contact'>Contact Us</RouterLink>
-          <RouterLink to='/about'>About Us</RouterLink>
+          <RouterLink to='/'>Contact Us</RouterLink>
+          <RouterLink to='/'>About Us</RouterLink>
           <RouterLink to="/login">Login</RouterLink>
         </Flex>
 
@@ -56,8 +56,8 @@ function Navbar() {
           >
             <VStack spacing={4} alignItems="flex-start" p={4}>
               <RouterLink to='/' onClick={toggleMenu}>Home</RouterLink>
-              <RouterLink to='/contact' onClick={toggleMenu}>Contact Us</RouterLink>
-              <RouterLink to='/about' onClick={toggleMenu}>About Us</RouterLink>
+              <RouterLink to='/' onClick={toggleMenu}>Contact Us</RouterLink>
+              <RouterLink to='/' onClick={toggleMenu}>About Us</RouterLink>
               <RouterLink to="/login" onClick={toggleMenu}>Login</RouterLink>
             </VStack>
           </Box>
